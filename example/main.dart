@@ -5,6 +5,7 @@ class ObserverExample extends Observer {
 
   ObserverExample(this.value);
 
+  //updates gets called when observable gets observed and observable notifies
   @override
   void update(Observable observable, Object arg) {
     //check which observable called update
