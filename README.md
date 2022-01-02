@@ -1,4 +1,4 @@
-Basic observer pattern without any special features.
+Basic dart only observer pattern without any special features.
 
 ## Features
 
@@ -19,7 +19,7 @@ final observable = ObservableX();
 observable.addObserver(observer);
 
 //notifies all observer
-observable.notifyObservers( /*arguments*/);
+observable.notifyObservers(/*arguments*/);
 ```
 
 Checkout example or test for detailed information.
