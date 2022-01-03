@@ -1,6 +1,6 @@
 import 'package:observer/observer.dart';
 
-class ObserverExample extends Observer {
+class ObserverExample with Observer {
   int value = 0;
 
   ObserverExample(this.value);
@@ -20,14 +20,14 @@ class ObserverExample extends Observer {
   }
 }
 
-class ObservableExample extends Observable {
+class ObservableExample with Observable {
   // wrapper function to prevent casting errors
   void setObserver(int number) {
     notifyObservers(number);
   }
 }
 
-class ResetObservable extends Observable {}
+class ResetObservable with Observable {}
 
 main() {
   //create observer

@@ -2,7 +2,7 @@ import 'package:test/test.dart';
 
 import 'package:observer/observer.dart';
 
-class ObserverTest extends Observer {
+class ObserverTest with Observer {
   int value = 0;
 
   ObserverTest(this.value);
@@ -16,14 +16,14 @@ class ObserverTest extends Observer {
   }
 }
 
-class ObservableTest extends Observable {
+class ObservableTest with Observable {
   // wrapper function to prevent casting errors
   void setObserver(int number) {
     notifyObservers(number);
   }
 }
 
-class DifferentObservable extends Observable {}
+class DifferentObservable with Observable {}
 
 void main() {
   test('two int observer with correct calls', () {
